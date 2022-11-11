@@ -42,9 +42,10 @@ hr {
 
  .ctn1 {
     text-align: left;
-    height: 100px;
+    height: 80px;
     overflow: clip;
     padding: 0;
+    margin: 3% auto;
  }
 
  .ctn2 {
@@ -88,7 +89,7 @@ hr {
 
     .ctn1 {
         width: 70%;
-        height: 100px
+        height: 80px;
     }
 
     .ctn2 {
