@@ -100,4 +100,8 @@ footer {
     .ctn2 {
         height: 200px;
     }
+
+    .ctn3 {
+        height: 40vh;
+    }
 }
