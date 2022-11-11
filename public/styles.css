@@ -79,3 +79,13 @@ hr {
     flex-direction: row;
     justify-content:space-between;
 }
+
+@media (max-width: 500px) {
+    .ctn  {
+        width: 100%;
+    }
+
+    .ctn1 {
+        width: 70%;
+    }
+}
