@@ -88,4 +88,8 @@ hr {
     .ctn1 {
         width: 70%;
     }
+
+    .ctn2 {
+        height: 200px;
+    }
 }
