@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs"); %>
+<h2 class="date"><%= date %></h2>
+    <div class="ctn ctn1 ctn2">
+        <form action="/expenses" method="post">
+            <label for="" class="form">Date:  </label>
+            <input type="date" name="date" class="form"><br>
+            <label for="" class="form">Spend to:  </label>
+            <input type="text" name="what" class="form"><br>
+            <label for="" class="form">Amount</label>
+            <input type="text" name="amount" class="form"><br>
+            <button type="submit" class="btn">Select</button>
+        </form>
+    </div>
+    <a href="http://localhost:3000/">Back to Home</a>
+    <hr class="addHR">
+    <div class="ctn ctn1">
+        <h2>History</h2>
+        <%expenses.forEach(function(expense){ %>
+            <div class="record">
+                <div><%= expense.date %></div>
+                <div><%= expense.what %></div>
+                <div><%= expense.amount %></div>
+            </div>
+        <%}) %>
+    </div>
+</body>
+</html>

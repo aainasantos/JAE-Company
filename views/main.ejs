@@ -1,0 +1,37 @@
+<%- include("partials/header.ejs"); %>
+        <h2 class="date"><%= date %></h2>
+        <form action="/" method="post">
+            <select name="add" id="">
+                <option value="">---Select---</option>
+                <option value="income">Income</option>
+                <option value="expenses">Expenses</option>
+            </select>
+            <button type="submit" class="btn">Select</button>
+        </form>
+        <hr>
+        <h2>History</h2>
+        <div class="ctn ctn1">
+            <h3><a href="/records/income">Income</a></h3>
+            <%tiles.forEach(function(tile){%>
+            <div class="record">
+                <div class="recent"><%= tile.income.date %></div>
+                <div class="recent"><%= tile.income.way %></div>
+                <div class="recent"><%= tile.income.amount%></div>
+            </div>
+            <%})%>
+        </div>        
+        <hr>
+        <div class="ctn ctn1">
+            <h3><a href="/records/expenses">Expenses</a></h3>
+            <%tiles.forEach(function(tile){%>
+                <div class="record">
+                    <div class="recent"><%= tile.expense.date %></div>
+                    <div class="recent"><%= tile.expense.way %></div>
+                    <div class="recent"><%= tile.expense.amount%></div>
+                </div>
+            <%})%>
+        </div>
+    </div>
+        
+</body>
+</html>

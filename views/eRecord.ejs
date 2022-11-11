@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs"); %>
+        <h2 class="date"><%= date %></h2>
+        <h2>Income Records</h2>
+        <a href="http://localhost:3000/">Back to Home</a>
+        <hr>
+        <div class="ctn ctn1 ctn3">
+            <%expenses.forEach(function(expense){ %>
+                <div class="record">
+                    <div><%= expense.date %></div>
+                    <div><%= expense.way %></div>
+                    <div><%= expense.amount %></div>
+                </div>
+            <%}) %>
+        </div>
+    </body>
+    </html>
