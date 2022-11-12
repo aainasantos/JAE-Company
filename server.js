@@ -142,7 +142,37 @@ app.get('/records/expenses', function(req, res){
             date: todayDate,
             expenses: expenses
         })
-    })
+    })  
+});
+
+app.post('/idelete', function(req, res){
+    let del = req.body.del;
+    Income.findOneAndDelete(del, function(err){
+        if(err){
+            alert("nothing to delete");
+        }
+    });
+    Tile.findOneAndDelete(del, function(err){
+        if(err){
+            alert("nothing to delete");
+        }
+    });
+    res.redirect('/income');
+});
+
+app.post('/edelete', function(req, res){
+    let del = req.body.del;
+    Expense.findOneAndDelete(del, function(err){
+        if(err){
+            alert("nothing to delete");
+        }
+    });
+    Tile.findOneAndDelete(del, function(err){
+        if(err){
+            alert("nothing to delete");
+        }
+    });
+    res.redirect('/expenses');
 });
 
 let port = process.env.PORT;

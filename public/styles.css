@@ -16,7 +16,12 @@ select {
 }
 
 form {
-    margin: 5% auto;
+    margin: 2% auto;
+}
+
+form .record {
+    margin: 0 auto;
+    color: cadetblue;
 }
 
 input {
@@ -32,7 +37,9 @@ hr {
 }
 
 footer {
-    margin: 20% auto 0;
+    width: 50%;
+    position: absolute;
+    bottom: 8%;
     color: rgb(126, 125, 125);
 }
 
@@ -47,19 +54,25 @@ footer {
 
  .ctn1 {
     text-align: left;
-    height: 80px;
+    height: 100px;
     overflow: clip;
     padding: 0;
-    margin: 3% auto;
+    margin: 2% auto;
  }
 
  .ctn2 {
-    height: 150px;
+    height: 160px;
  }
 
  .ctn3 {
     overflow: scroll;
     height: 50vh;
+ }
+
+ .ctn4 {
+    overflow: scroll;
+    height: 200px;
+    width: 85%;
  }
 
 .date {
@@ -86,6 +99,10 @@ footer {
     justify-content:space-between;
 }
 
+.item {
+    margin: 0 1% 0;
+}
+
 @media (max-width: 700px) {
     .ctn  {
         width: 95vw;
@@ -93,7 +110,34 @@ footer {
     }
 
     .ctn1 {
-        width: 60%;
+        width: 95%;
+        height: 80px;
+    }
+
+    .ctn2 {
+        height: 200px;
+    }
+
+    .ctn3 {
+        height: 40vh;
+    }
+}
+
+@media (max-height: 700px){
+    h1 {
+        font-size: clamp(1rem);
+    }
+    .landscape {
+        display: flex;
+        flex-direction: column;
+    }
+    .ctn  {
+        width: 95vw;
+        height: 95vh;
+    }
+
+    .ctn1 {
+        width: 95%;
         height: 80px;
     }
 

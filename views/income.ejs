@@ -16,11 +16,15 @@
     <h2>History</h2>
     <div class="ctn ctn1">
         <%incomes.forEach(function(income){ %>
-            <div class="record">
-                <div><%= income.date %></div>
-                <div><%= income.way %></div>
-                <div><%= income.amount %></div>
-            </div>
+            <form action="/idelete" method="post">
+                <div class="record">
+                    <input type="hidden" class="item" name="del" value=<%= income.id %>>
+                    <span class="item"><%= income.date %></span>
+                    <span class="item"><%= income.way %></span>
+                    <span><%= income.amount %></span> 
+                    <button type="submit"><i class="fa-regular fa-trash-can"></i>                   
+                    </button>
+                </div>
         <%}) %>
     </div>
     <%- include("partials/footer.ejs"); %>

@@ -13,14 +13,23 @@
     </div>
     <a href="/">Back to Home</a>
     <hr class="addHR">
-    <div class="ctn ctn1">
-        <h2>History</h2>
+    
+    <h2>History</h2>
+    <div class="ctn ctn1 ctn4">
         <%expenses.forEach(function(expense){ %>
-            <div class="record">
-                <div><%= expense.date %></div>
-                <div><%= expense.what %></div>
-                <div><%= expense.amount %></div>
-            </div>
+            <form action="/edelete" method="post">
+                <div class="record">
+                    <input type="hidden" class="item" name="del" value=<%= expense.id %>>
+                    <span class="item"><%= expense.date %></span>
+                    <span class="item"><%= expense.what %></span>
+                    <span><%= expense.amount %></span> 
+                    <button type="submit"><i class="fa-regular fa-trash-can"></i>                   
+                    </button>
+                </div>
+                    
+            </form>
+
+
         <%}) %>
     </div>
     <%- include("partials/footer.ejs"); %>
