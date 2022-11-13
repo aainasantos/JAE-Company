@@ -2,20 +2,20 @@
 <h2 class="date"><%= date %></h2>
     <div class="ctn ctn1 ctn2">
         <form action="/expenses" method="post">
-            <label for="" class="form">Date:  </label>
-            <input type="date" name="date" class="form"><br>
-            <label for="" class="form">Spend to:  </label>
-            <input type="text" name="what" class="form"><br>
-            <label for="" class="form">Amount</label>
-            <input type="text" name="amount" class="form"><br>
+            <label>Date:  </label>
+            <input type="date" name="date" required><br>
+            <label>Spend to:  </label>
+            <input type="text" name="what" required><br>
+            <label>Amount</label>
+            <input type="text" name="amount" required><br>
             <button type="submit" class="btn">Select</button>
         </form>
     </div>
     <a href="/">Back to Home</a>
     <hr class="addHR">
     
-    <h2>History</h2>
-    <div class="ctn ctn1 ctn4">
+    <h2>Expenses Records</h2>
+    <div class="ctn ctn1 ctn3 ctn4">
         <%expenses.forEach(function(expense){ %>
             <form action="/edelete" method="post">
                 <div class="record">

@@ -1,13 +1,18 @@
 body {
     margin: 0;
     text-align: center;
-    font-size: clamp(.5em, 3vw, 1em);
+    font-size: clamp(1em, 2vw, 1.2em);
 }
 
 h1 {
     font-family: Cookie , Courier, monospace;
     font-size: clamp(3em, 5vw, 4em);
-    margin-bottom: 0;
+    margin-bottom: 2%;
+}
+
+h2 {
+    font-size: clamp(1.5em, 4vw, 2em);   
+    margin: 3% auto;
 }
 
 select {
@@ -34,13 +39,11 @@ hr {
     border-bottom: none;
     color: rgb(230, 221, 221);
     width: 40%;
-    margin: 2% auto;
+    margin: 3% auto;
 }
 
 footer {
     position: relative;
-    bottom: 5%;
-    background-color: rgb(237, 250, 250);
     width: 100%;
     color: rgb(126, 125, 125);
     display: grid;
@@ -70,13 +73,11 @@ footer {
 
  .ctn3 {
     overflow: scroll;
-    height: 50vh;
+    height: 45vh;
  }
 
  .ctn4 {
-    overflow: scroll;
-    height: 200px;
-    width: 85%;
+    height: 20%;
  }
 
 .date {
@@ -86,11 +87,6 @@ footer {
 .btn {
     padding: .5em 1em; 
     border-radius: 5px;
-}
-
-.btn1 {
-    margin-top: 2%;
-    justify-content: center;
 }
 
 .addHR {
@@ -103,9 +99,6 @@ footer {
     justify-content:space-between;
 }
 
-.item {
-    margin: 0 1% 0;
-}
 
 @media (max-width: 700px) {
     .ctn  {
@@ -124,5 +117,9 @@ footer {
 
     .ctn3 {
         height: 40vh;
+    }
+
+    .ctn4 {
+        height: 25vh;
     }
 }
